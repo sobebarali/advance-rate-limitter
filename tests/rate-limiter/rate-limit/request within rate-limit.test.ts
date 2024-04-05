@@ -2,7 +2,7 @@ import request from "supertest";
 
 import app from "../../../src";
 import config from "../../../src/configs";
-import { jest } from "@jest/globals";
+
 
 test("Should allow requests within the rate limit", async () => {
   const numRequests = config.requestLimits.max;

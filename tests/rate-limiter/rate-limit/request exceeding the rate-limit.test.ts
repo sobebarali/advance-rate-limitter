@@ -15,7 +15,7 @@ test("Should block requests exceeding the rate limit", async () => {
     } else {
       expect(response.status).toBe(429);
       expect(response.text).toContain(
-        "Your IP has exceeded the 10 request limit per 1 minute(s). Try again in 1 minute(s)"
+        "Too many requests from this IP, please try again later"
       );
     }
   }

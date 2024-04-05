@@ -14,6 +14,6 @@ test("Should block concurrent requests exceeding the IP limit", async () => {
   const responses = await Promise.all(promises);
   expect(responses[numRequests - 1].status).toBe(429);
   expect(responses[numRequests - 1].text).toContain(
-    "Your IP has exceeded the 10 request limit per 1 minute(s). Try again in 1 minute(s)."
+    "Your IP has exceeded the 10 request limit per 60 seconds(s). Try again in 60 seconds(s)."
   );
 });
